@@ -24,9 +24,13 @@ crear_carpeta_workspace()
 # Instalar yay y pip
 ejecutar_comando("sudo pacman -S python-pip", "Instalando pip-Python")
 ejecutar_comando("sudo pacman -S git base-devel", "Instalando yay")
-ejecutar_comando("git clone https://aur.archlinux.org/yay.git", "Instalando yay.")
-ejecutar_comando("cd yay", "Instalando yay..")
-ejecutar_comando("makepkg -si", "Instalando yay...")
+#ejecutar_comando("git clone https://aur.archlinux.org/yay.git", "Instalando yay.")
+#ejecutar_comando("cd yay", "Instalando yay..")
+#ejecutar_comando("makepkg -si", "Instalando yay...")
+
+
+
+
 
 # Instalar Neofetch
 ejecutar_comando("sudo pacman -S neofetch", "Instalación de Neofetch")  # En Ubuntu usa: sudo apt install neofetch
@@ -38,8 +42,8 @@ nombre_git = input("Introduce tu nombre para la configuración de Git: ")
 email_git = input("Introduce tu email para la configuración de Git: ")
 
 # Configurar Git con las credenciales ingresadas
-ejecutar_comando(f"git config --global user.name '{nombre_git}'", "Configuración de Git (Nombre)")
-ejecutar_comando(f"git config --global user.email '{email_git}'", "Configuración de Git (Email)")
+#ejecutar_comando(f"git config --global user.name '{nombre_git}'", "Configuración de Git (Nombre)")
+#ejecutar_comando(f"git config --global user.email '{email_git}'", "Configuración de Git (Email)")
 
 # Instalacion De Acpi
 ejecutar_comando("sudo pacman -S acpi", "Instalando Acpi")
@@ -126,25 +130,13 @@ while bandera_3_ == 1:
     except ValueError:
         print("Error: Debes introducir un número válido.")
 
-print("\n¿Deseas instalar Entornos de Desarrollo Integrados (IDE) para programar?")
-opcion_2_ = int(input("1: para Visual Studio Code\n2: para IntelliJ\n3: para ambos\n4: no\n"))
-
+print("\nDeseas instalar Entornos de desarrollo Integrados (IDE) para programar? ")
+opcion_2_ = int(input("1: para visual studio code\n 2: para IntelliJ\n 3: para ambos"))
 if opcion_2_ == 1:
-    ejecutar_comando("yay -S visual-studio-code-bin", "Instalando Visual Studio Code")
-elif opcion_2_ == 2:
-    ejecutar_comando("yay -S intellij-idea-ultimate-edition", "Instalando IntelliJ Ultimate EDITION")
-elif opcion_2_ == 3:
-    ejecutar_comando("yay -S visual-studio-code-bin", "Instalando Visual Studio Code")
-    ejecutar_comando("yay -S intellij-idea-ultimate-edition", "Instalando IntelliJ Ultimate EDITION")
-elif opcion_2_ == 4:
-    print("No se instalará ningún IDE.")
-else:
-    print("Opción inválida. Por favor, selecciona un número entre 1 y 4.")
+    ejecutar_comando("yay -S visual-studio-code-bin",)
+print()
+print()
 
-# Mensajes finales
 print("\nTodos los procesos completados correctamente.")
-print("\nOpciones Finales:")
-print("Para comprobar que Docker está funcionando correctamente, puedes ejecutar:")
-print("sudo docker run hello-world")
-print("Para iniciar Neofetch, simplemente ejecuta 'neofetch' en la terminal.")
-print("Para iniciar Visual Studio Code o IntelliJ, busca en tu menú de aplicaciones.")
+print("\nOpciones Finales : \n Comprobar el estado de docker en el sistema: 'sudo docker run hello-world'")
+print("\n")
