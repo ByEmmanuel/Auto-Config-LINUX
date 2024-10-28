@@ -28,6 +28,12 @@ ejecutar_comando("git clone https://aur.archlinux.org/yay.git", "Instalando yay.
 ejecutar_comando("cd yay", "Instalando yay..")
 ejecutar_comando("makepkg -si", "Instalando yay...")
 
+# Instalar Fuse
+ejecutar_comando("sudo pacman -S fuse", "Instalando Fuse")
+
+# Instalar crhomium
+ejecutar_comando("sudo pacman -S chromium", "Instalando chromium")
+
 # Instalar Neofetch
 ejecutar_comando("sudo pacman -S neofetch", "Instalación de Neofetch")  # En Ubuntu usa: sudo apt install neofetch
 
@@ -130,11 +136,13 @@ print("\n¿Deseas instalar Entornos de Desarrollo Integrados (IDE) para programa
 opcion_2_ = int(input("1: para Visual Studio Code\n2: para IntelliJ\n3: para ambos\n4: no\n"))
 
 if opcion_2_ == 1:
-    ejecutar_comando("yay -S visual-studio-code-bin", "Instalando Visual Studio Code")
+    #ejecutar_comando("yay -S visual-studio-code-bin", "Instalando Visual Studio Code")
+    print("NO Instalando VS Code")
 elif opcion_2_ == 2:
-    ejecutar_comando("yay -S intellij-idea-ultimate-edition", "Instalando IntelliJ Ultimate EDITION")
+    #ejecutar_comando("yay -S intellij-idea-ultimate-edition", "Instalando IntelliJ Ultimate EDITION")
+    ejecutar_comando("")
 elif opcion_2_ == 3:
-    ejecutar_comando("yay -S visual-studio-code-bin", "Instalando Visual Studio Code")
+    ejecutar_comando("yay -S visual-studio-code-bin", "Instalando Visual Studio Code")    
     ejecutar_comando("yay -S intellij-idea-ultimate-edition", "Instalando IntelliJ Ultimate EDITION")
 elif opcion_2_ == 4:
     print("No se instalará ningún IDE.")
